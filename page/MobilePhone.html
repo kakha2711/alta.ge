@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <title>მობილური ტელეფონები - სმარტფონები | Alta</title>
+</head>
+<body>
+    
+    <header>
+        <nav>
+
+            <!-- ემბლემის დასაწყისი -->
+            <div class="emblema">
+                <a href="../index.html">
+                    <img class="emblema_img" src="../picture/alta.bmp" alt="Emblema">
+                </a>
+            </div>
+            <!-- ემბლემის დასასრული -->
+            
+            <!-- ჩამოშლადი მენიუს დასაწყისი -->
+
+
+          <div class="menu-container">
+            <button id="mainButton" class="category-btn">
+                <div class="burger-bars">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <p class="categori">კატეგორიები </p>
+            </button>
+    
+            <div id="dropdownMenu" class="dropdown-content hidden">
+                <ul class="main-categories">
+                    <li class="category-item" data-target="phones">📱 მობილური ტელეფონები და აქსესუარები</li>
+                    <li class="category-item" data-target="computers">💻 კომპიუტერული ტექნიკა და აქსესუარები</li>
+                </ul>
+
+                <div id="subMenuContainer" class="sub-menu-content hidden">
+                    <div id="phones" class="sub-menu-inner hidden">
+                        <div class="column">
+                            <a href="MobilePhone.html">მობილური ტელეფონები</a>
+                            <a href="#">სმარტ საათები</a>
+                        </div>
+                        <div class="column">
+                            <a href="#">სმარტ საათების და აქსესუარები</a>
+                            <a href="#">მობილური ტელეფონის და აქსესუარები</a>
+                            <a href="#">დამცავი ქეისი და ეკრანის დამცავი</a>
+                        </div>
+                    </div>
+
+                    <div id="computers" class="sub-menu-inner hidden">
+                        <div class="column">
+                            <a href="#">ნოუთბუქი და ნოუთბუქის აქსესუარები</a>
+                        </div>
+                        <div class="column">
+                            <a href="#">სისტემური ბლოკი</a>
+                            <a href="#">მონიტორი</a>
+                            <a href="#">მონიტორის აქსესუარები</a>
+                        </div>
+                        <div class="column">
+                            <a href="#">ქსელური მოწყობილობები</a>
+                            <a href="#">როუტერი და ქსელის გამანაწილებლები/სვიჩი</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+            <!-- ჩამოშლადი მენიუს დასასრული -->
+
+            <!-- ძებნის ღილაკის დასაწყისი -->
+
+             <div class="search_div">
+                <div>
+                    <input class="search" type="text" placeholder="რას ეძებთ?..." name="search" id="search">
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+            <!-- ძებნის ღილაკის დასასრული -->
+
+            <!-- შესვლის ფორმის დასაწყისი -->
+
+            <div class="last">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-regular fa-heart"></i>
+            
+                <button class="login_in" id="openBtn" type="button" value="შესვლა">
+                    <i class="fa-solid fa-arrow-right-to-bracket log_in_button"></i>
+                    შესვლა
+                </button>
+
+                <dialog id="loginModal">
+                    <form method="dialog">
+                         <div class="buttons">
+                        <!-- <button type="submit">შესვლა</button> -->
+                        <button type="button" id="closeBtn">X</button>
+                        </div>
+
+
+                        <div class="login_emblema">
+                            <img class="login_emblema_img" src="picture/Log_In_Emblema.bmp" alt="">
+                        </div>
+                        <h2 class="profile">პროფილი</h2>
+                        <p class="avtorizacia">გაიარე ავტორიზაცია სისტემაში</p>
+                       
+
+
+                        
+                       <div class="auth-container">
+                            <div class="toggle-wrapper">
+                                <button id="btn-phone" class="toggle-btn active" onclick="switchTab('phone')">მობილურის ნომრით</button>
+                                <button id="btn-email" class="toggle-btn" onclick="switchTab('email')">ელ.ფოსტით</button>
+                            </div>
+
+                            <div id="content-phone" class="tab-content active">
+                                <div class="phone">
+                                    <div class="phone-select-wrapper has-arrow">
+                                        
+                                        <select id="countrySelect" class="form-select custom-select-hidden">
+                                            <option value="+995" data-flag="🇬🇪" selected>Georgia +995</option>
+                                            <option value="+54" data-flag="🇦🇷">Argentina +54</option>
+                                            <option value="+32" data-flag="🇧🇪">Belgium +32</option>
+                                        </select>
+                                    </div>
+                                    <input class="phone-number" type="text" placeholder="მობილური ნომერი" required>
+                                </div>
+                            </div>
+
+                            <div id="content-email" class="tab-content">
+                                <input class="email-input" type="email" placeholder="ელ.ფოსტა" required>
+                            </div>
+                        </div>
+
+                       
+                    </form>
+                </dialog>
+
+                <div class="Language">
+                    GE
+                </div>
+            </div>
+
+            
+        </nav>
+
+        <div class="header_last">
+            <p class="phone">*3838/(032) 238-00-38</p>
+            <ul class="blogi">
+                <li>ბლოგი</li>
+                <li>მაღაზიები</li>
+                <li>ყველა აქცია</li>
+            </ul>
+        </div>
+
+    </header>
+   
+
+    <main class="main">
+        <div class="mobile_div">
+
+            <section class="section_meniu">
+                <div class="range-container">
+                    <p>ფილტრი</p>
+                    <p>გასუფთავება</p>
+                </div>
+
+                <div class="main_div">
+                <div class="slider">
+                    <div class="range"></div>
+                    <div class="track"></div>
+                        <span id="maxValue">ფასი</span>
+                    <input type="range" min="0" max="100" value="80" id="maxRange">
+                    <input type="range" min="0" max="100" value="20" id="minRange">
+                    </div>
+
+                    <div class="values">
+                        <div class="values_left">
+                            <p class="minVal_dan">დან</p>
+                            <p id="minVal" class="minVal">20</p>
+                        </div>
+                        <div class="values_righte">
+                            <p class="maxVal_mde">მდე</p>
+                            <p id="maxVal" class="maxVal">80     ₾</p>
+                        </div>
+                    </div>
+
+
+                    <div class="aqciis_div">
+                        <p class="aqciis_p">აქციის ტიპი</p>
+                    </div>
+                    <div class="xelmisacvdomi">
+                        <p class="aqciis_p">ხელმისაწვდომობა</p>
+                    </div>
+                    <div class="brendi_div">
+                        <p class="aqciis_p">ბრენდი</p>
+                    </div>
+                    <div class="type_div">
+                        <p class="aqciis_p">ტიპი</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <section class="card_section">
+            
+            <div class="card_mobilePhone">
+                <div class="card_card">
+                    <div class="card_img_picture">
+                        <img src="../picture/Mobail_phicture0.jpg" alt="">
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        <i class="fa-regular fa-heart"></i>
+                        
+                    </div>
+                    
+                    <div class="card_button_kidva">
+                        <p class="apple_p">Apple iPhone 17 Pro e-Sim Only 12GB/256GB -...</p>
+                        <p class="price_3">3949 ₾</p>
+                        
+                        <div class="kidva_botton_card">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <button type="button">ყიდვა</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card_mobilePhone">
+                <div class="card_card">
+                    <div class="card_img_picture">
+                        <img src="../picture/Mobail_phicture0.jpg" alt="">
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        <i class="fa-regular fa-heart"></i>
+                        
+                    </div>
+                    
+                    <div class="card_button_kidva">
+                        <p class="apple_p">Apple iPhone 17 Pro e-Sim Only 12GB/256GB -...</p>
+                        <p class="price_3">3949 ₾</p>
+                        
+                        <div class="kidva_botton_card">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <button type="button">ყიდვა</button>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+
+            <div class="card_mobilePhone">
+                <div class="card_card">
+                    <div class="card_img_picture">
+                        <img src="../picture/Mobail_phicture0.jpg" alt="">
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        <i class="fa-regular fa-heart"></i>
+                       
+                    </div>
+                    
+                    <div class="card_button_kidva">
+                        <p class="apple_p">Apple iPhone 17 Pro e-Sim Only 12GB/256GB -...</p>
+                        <p class="price_3">3949 ₾</p>
+                        <div class="kidva_botton_card">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <button type="button">ყიდვა</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card_mobilePhone">
+                <div class="card_card">
+                    <div class="card_img_picture">
+                        <img src="../picture/Mobail_phicture0.jpg" alt="">
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        <i class="fa-regular fa-heart"></i>
+                       
+                    </div>
+                    
+                    <div class="card_button_kidva">
+                        <p class="apple_p">Apple iPhone 17 Pro e-Sim Only 12GB/256GB -...</p>
+                        <p class="price_3">3949 ₾</p>
+                        <div class="kidva_botton_card">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <button type="button">ყიდვა</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card_mobilePhone">
+                <div class="card_card">
+                    <div class="card_img_picture">
+                        <img src="../picture/Mobail_phicture0.jpg" alt="">
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        <i class="fa-regular fa-heart"></i>
+                    
+                    </div>
+                    
+                    <div class="card_button_kidva">
+                        <p class="apple_p">Apple iPhone 17 Pro e-Sim Only 12GB/256GB -...</p>
+                        <p class="price_3">3949 ₾</p>
+                        <div class="kidva_botton_card">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <button type="button">ყიდვა</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card_mobilePhone">
+                <div class="card_card">
+                    <div class="card_img_picture">
+                        <img src="../picture/Mobail_phicture0.jpg" alt="">
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        <i class="fa-regular fa-heart"></i>
+                      
+                    </div>
+                    
+                    <div class="card_button_kidva">
+                        <p class="apple_p">Apple iPhone 17 Pro e-Sim Only 12GB/256GB -...</p>
+                        <p class="price_3">3949 ₾</p>
+                        <div class="kidva_botton_card">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <button type="button">ყიდვა</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card_mobilePhone">
+                <div class="card_card">
+                    <div class="card_img_picture">
+                        <img src="../picture/Mobail_phicture0.jpg" alt="">
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        <i class="fa-regular fa-heart"></i>
+                       
+                    </div>
+                    
+                    <div class="card_button_kidva">
+                        <p class="apple_p">Apple iPhone 17 Pro e-Sim Only 12GB/256GB -...</p>
+                        <p class="price_3">3949 ₾</p>
+                        <div class="kidva_botton_card">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <button type="button">ყიდვა</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card_mobilePhone">
+                <div class="card_card">
+                    <div class="card_img_picture">
+                        <img src="../picture/Mobail_phicture0.jpg" alt="">
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        <i class="fa-regular fa-heart"></i>
+                      
+                    </div>
+                    
+                    <div class="card_button_kidva">
+                        <p class="apple_p">Apple iPhone 17 Pro e-Sim Only 12GB/256GB -...</p>
+                        <p class="price_3">3949 ₾</p>
+                        <div class="kidva_botton_card">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <button type="button">ყიდვა</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card_mobilePhone">
+                <div class="card_card">
+                    <div class="card_img_picture">
+                        <img src="../picture/Mobail_phicture0.jpg" alt="">
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        <i class="fa-regular fa-heart"></i>
+                        
+                    </div>
+                    
+                    <div class="card_button_kidva">
+                        <p class="apple_p">Apple iPhone 17 Pro e-Sim Only 12GB/256GB -...</p>
+                        <p class="price_3">3949 ₾</p>
+                        <div class="kidva_botton_card">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <button type="button">ყიდვა</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card_mobilePhone">
+                <div class="card_card">
+                    <div class="card_img_picture">
+                        <img src="../picture/Mobail_phicture0.jpg" alt="">
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        <i class="fa-regular fa-heart"></i>
+                        
+                    </div>
+                    
+                    <div class="card_button_kidva">
+                        <p class="apple_p">Apple iPhone 17 Pro e-Sim Only 12GB/256GB -...</p>
+                        <p class="price_3">3949 ₾</p>
+                        <div class="kidva_botton_card">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <button type="button">ყიდვა</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+
+<footer>
+    <div class="footer_div">
+        <div class="chvens_Sesaxeb">
+            <p class="footer_text">ჩვენს შესახებ</p>
+            <a href="#">ვინ ვართ ჩვენ</a>
+            <a href="#">ონლაინ ყიდვის ინსტრუქცია</a>
+            <a href="#">ონლაინ გადახდის მეთოდები</a>
+            <a href="#">სერვის ცენტრების მისამართები</a>
+        </div>
+
+        <div class="cesebi_pirobebi">
+            <p class="footer_text">წესები და პირობები</p>
+            <a href="#">წესები და პირობები</a>
+            <a href="#">საგარანტიო პირობები</a>
+            <a href="#">მიწოდების წესები და პირობები</a>
+            <a href="#">პერსონალურ მონაცემთა პოლიტიკა</a>
+        </div>
+
+        <div class="gamogvkevi">
+            <p class="footer_text">გამოგვყევი</p>
+            <a href="#">faceboock</a>
+            <a href="#">instagram</a>
+            <a href="#">TikTok</a>
+            <a href="#">Youtube</a>
+        </div>
+
+        <div class="dagvikavshirdi">
+            <p class="footer_text">დაგვიკავშირდი</p>
+            <a href="#">sartania.ka@gmail.com</a>
+            <a href="#">599 98 52 26</a>
+            <a href="#">*3838</a>
+            <a href="#">მაღაზიები</a>
+        </div>
+    </div>
+    <div class="saavtoro_text_div">
+        <p class="saavtoro_text">საავტორო უფლებები © 2026 Alta.ge. ყველა უფლება დაცულია.</p>
+    </div>
+</footer>
+
+
+
+
+
+    <script>
+
+          const mainButton = document.getElementById('mainButton');
+const dropdownMenu = document.getElementById('dropdownMenu');
+const categoryItems = document.querySelectorAll('.category-item');
+const subMenuContainer = document.getElementById('subMenuContainer');
+const subMenus = document.querySelectorAll('.sub-menu-inner');
+const menuContainer = document.querySelector('.menu-container');
+
+// ღილაკზე მაუსის მიტანა - ძირითადი მენიუს გამოჩენა
+mainButton.addEventListener('mouseover', () => {
+    dropdownMenu.classList.remove('hidden');
+});
+
+
+
+// კატეგორიებზე მაუსის მიტანა - ქვემენიუების მართვა
+categoryItems.forEach(item => {
+    item.addEventListener('mouseover', () => {
+        const targetId = item.getAttribute('data-target');
+        
+        // ვაჩვენებთ ქვემენიუს კონტეინერს
+        subMenuContainer.classList.remove('hidden');
+        
+        // ვმალავთ ყველა ქვემენიუს და ვაჩვენებთ მხოლოდ შესაბამისს
+        subMenus.forEach(menu => {
+            menu.classList.add('hidden');
+            if (menu.id === targetId) {
+                menu.classList.remove('hidden');
+            }
+        });
+    });
+});
+
+// მთლიანი კონტეინერიდან მაუსის გასვლა - ყველაფრის დახურვა
+menuContainer.addEventListener('mouseleave', () => {
+    dropdownMenu.classList.add('hidden');
+    subMenuContainer.classList.add('hidden');
+});
+
+const modal = document.getElementById('loginModal');
+        const openBtn = document.getElementById('openBtn');
+        const closeBtn = document.getElementById('closeBtn');
+
+        // ფანჯრის გახსნა
+        openBtn.addEventListener('click', () => {
+        modal.showModal();
+        });
+
+        // ფანჯრის დახურვა
+        closeBtn.addEventListener('click', () => {
+        modal.close();
+        });
+
+
+
+
+       const minRange = document.getElementById("minRange");
+        const maxRange = document.getElementById("maxRange");
+        const range = document.querySelector(".range");
+        const minVal = document.getElementById("minVal");
+        const maxVal = document.getElementById("maxVal");
+
+        const updateRange = () => {
+        const min = +minRange.value;
+        const max = +maxRange.value;
+        const percentMin = (min / 100) * 100;
+        const percentMax = (max / 100) * 100;
+
+        range.style.left = percentMin + "%";
+        range.style.width = (percentMax - percentMin) + "%";
+
+        minVal.textContent = min;
+        maxVal.textContent = max;
+        };
+
+        minRange.addEventListener("input", () => {
+        if (+minRange.value >= +maxRange.value) {
+            minRange.value = maxRange.value - 1;
+        }
+        updateRange();
+        });
+
+maxRange.addEventListener("input", () => {
+  if (+maxRange.value <= +minRange.value) {
+    maxRange.value = +minRange.value + 1;
+  }
+  updateRange();
+});
+
+updateRange();
+
+
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</body>
+</html>

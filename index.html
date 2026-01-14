@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>ტექნიკის მაღაზია - შეიძინეთ ონლინ | Alta</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+</head>
+<body>
+    
+
+    <header>
+        <nav>
+
+            <!-- ემბლემის დასაწყისი -->
+            <div class="emblema">
+                <a href="index.html">
+                    <img class="emblema_img" src="picture/alta.bmp" alt="Emblema">
+                </a>
+            </div>
+            <!-- ემბლემის დასასრული -->
+            
+            <!-- ჩამოშლადი მენიუს დასაწყისი -->
+
+
+          <div class="menu-container">
+            <button id="mainButton" class="category-btn">
+                <div class="burger-bars">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <p class="categori">კატეგორიები </p>
+            </button>
+    
+            <div id="dropdownMenu" class="dropdown-content hidden">
+                <ul class="main-categories">
+                    <li class="category-item" data-target="phones">📱 მობილური ტელეფონები და აქსესუარები</li>
+                    <li class="category-item" data-target="computers">💻 კომპიუტერული ტექნიკა და აქსესუარები</li>
+                </ul>
+
+                <div id="subMenuContainer" class="sub-menu-content hidden">
+                    <div id="phones" class="sub-menu-inner hidden">
+                        <div class="column">
+                            <a href="page/MobilePhone.html">მობილური ტელეფონები</a>
+                            <a href="#">სმარტ საათები</a>
+                        </div>
+                        <div class="column">
+                            <a href="#">სმარტ საათების და აქსესუარები</a>
+                            <a href="#">მობილური ტელეფონის და აქსესუარები</a>
+                            <a href="#">დამცავი ქეისი და ეკრანის დამცავი</a>
+                        </div>
+                    </div>
+
+                    <div id="computers" class="sub-menu-inner hidden">
+                        <div class="column">
+                            <a href="#">ნოუთბუქი და ნოუთბუქის აქსესუარები</a>
+                        </div>
+                        <div class="column">
+                            <a href="#">სისტემური ბლოკი</a>
+                            <a href="#">მონიტორი</a>
+                            <a href="#">მონიტორის აქსესუარები</a>
+                        </div>
+                        <div class="column">
+                            <a href="#">ქსელური მოწყობილობები</a>
+                            <a href="#">როუტერი და ქსელის გამანაწილებლები/სვიჩი</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+            <!-- ჩამოშლადი მენიუს დასასრული -->
+
+            <!-- ძებნის ღილაკის დასაწყისი -->
+
+             <div class="search_div">
+                <input class="search" type="text" placeholder="რას ეძებთ?..." name="search" id="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                
+            </div>
+
+            <!-- ძებნის ღილაკის დასასრული -->
+
+            <!-- შესვლის ფორმის დასაწყისი -->
+
+            <div class="last">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-regular fa-heart"></i>
+            
+                <button class="login_in" id="openBtn" type="button" value="შესვლა">
+                    <i class="fa-solid fa-arrow-right-to-bracket log_in_button"></i>
+                    შესვლა
+                </button>
+
+                <dialog id="loginModal">
+                    <form method="dialog">
+                         <div class="buttons">
+                        <!-- <button type="submit">შესვლა</button> -->
+                        <button type="button" id="closeBtn">X</button>
+                        </div>
+
+
+                        <div class="login_emblema">
+                            <img class="login_emblema_img" src="picture/Log_In_Emblema.bmp" alt="">
+                        </div>
+                        <h2 class="profile">პროფილი</h2>
+                        <p class="avtorizacia">გაიარე ავტორიზაცია სისტემაში</p>
+                       
+
+
+                        
+                       <div class="auth-container">
+                            <div class="toggle-wrapper">
+                                <button id="btn-phone" class="toggle-btn active" onclick="switchTab('phone')">მობილურის ნომრით</button>
+                                <button id="btn-email" class="toggle-btn" onclick="switchTab('email')">ელ.ფოსტით</button>
+                            </div>
+
+                            <div id="content-phone" class="tab-content active">
+                                <div class="phone">
+                                    <div class="phone-select-wrapper has-arrow">
+                                        
+                                        <select id="countrySelect" class="form-select custom-select-hidden">
+                                            <option value="+995" data-flag="🇬🇪" selected>Georgia +995</option>
+                                            <option value="+54" data-flag="🇦🇷">Argentina +54</option>
+                                            <option value="+32" data-flag="🇧🇪">Belgium +32</option>
+                                        </select>
+                                    </div>
+                                    <input class="phone-number" type="text" placeholder="მობილური ნომერი" required>
+                                </div>
+                            </div>
+
+                            <div id="content-email" class="tab-content">
+                                <input class="email-input" type="email" placeholder="ელ.ფოსტა" required>
+                            </div>
+                        </div>
+
+                       
+                    </form>
+                </dialog>
+
+                <div class="Language">
+                    GE
+                </div>
+            </div>
+
+            
+        </nav>
+
+        <div class="header_last">
+            <p class="phone">*3838/(032) 238-00-38</p>
+            <ul class="blogi">
+                <li>ბლოგი</li>
+                <li>მაღაზიები</li>
+                <li>ყველა აქცია</li>
+            </ul>
+        </div>
+
+    </header>
+        
+
+
+    <section class="Animation_section">
+        <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="picture/63fa9038-6ef6-47ee-887c-f77ba3ce2e08e2fdaa2d-0fac-4a6f-baad-b928c5d77ab8.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="picture/7b498ee8-e864-492a-a437-c0f2b4dd6984f047b3e0-3aac-4dea-afd9-f17a3814c041.webp" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="picture/7ca4dd99-3ba8-4f26-bdf5-85d290b55f1902cf118c-ca9a-4c3c-98eb-e15c50d251a8.webp" class="d-block w-100" alt="...">
+                </div>
+                
+                <div class="carousel-item">
+                    <img src="picture/841202db-a747-4e2d-89b4-5c7254e57e777b79254c-2233-4160-8213-e114fb678811.webp" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="picture/b90fdb90-0215-4097-a8f6-a2bdb2055eb29966aca1-d0a0-41a1-95e1-3a47114e610b.webp" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="picture/e0626074-bebf-4148-afba-efafdd2238bcfba166bb-d350-466d-9e59-9c4d67397eaa.webp" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <section class="image">
+        <div class="left">
+            <img class="left_img" src="picture/b4faeea9-5c75-428d-b74e-7ae65285e443ff7b0869-3731-42ff-ac48-575d96607e79.bmp" alt="phicture">
+        </div>
+        <div class="right">
+            <img class="right_img" src="picture/a7acd51a-e1f3-49ae-80c3-16bbf9c6a601657df66a-22cb-4bc2-b3d9-2a357fb1d918.jpg" alt="picture">
+        </div>
+    </section>
+
+    <section class="section_categoriebi">
+        <p class="kategoriebi">კატეგორიები</p>
+        <div class="link_div">
+            <a class="link_a" href="#">
+                <h3 class="link_h3">ტელევიზორები და აუდიო სისტემები</h3>
+                <img class="link_img" src="picture/950476a3-12f2-43e5-8a11-414da32116ab_Thumb.png" alt="picture">
+            </a>
+            <a class="link_a" href="#">
+                <h3 class="link_h3">კომპიუტერული სისტემები და აქსესუარები</h3>
+                <img class="link_img" src="picture/ec351e6d-b453-4f17-83a4-b679b135e00d_Thumb.png" alt="picture">
+            </a>
+            <a class="link_a" href="#">
+                <h3 class="link_h3">მობილური სისტემები და აქსესუარები</h3>
+                <img class="link_img" src="picture/eb32a29f-3baf-4ef2-b3b4-8c13d4696032_Thumb.png" alt="picture">
+            </a>
+            <a class="link_a" href="#">
+                <h3 class="link_h3">ფოტო და ვიდეო</h3>
+                <img class="link_img" src="picture/2c5d189d-02b1-41e5-92ce-f0380f8dbf4e_Thumb.png" alt="picture">
+            </a>
+            <a class="link_a" href="#">
+                <h3 class="link_h3">გეიმინგი</h3>
+                <img class="link_img" src="picture/91821761-cb04-47b8-98de-f65458e1ca12_Thumb.png" alt="picture">
+            </a>
+            <a class="link_a" href="#">
+                <h3 class="link_h3">მსხვილი საყოფაცხოვრებო ტექნიკა</h3>
+                <img class="link_img" src="picture/87769931-07eb-4d21-bd0b-e9a0d5eb6148_Thumb.png" alt="picture">
+            </a>
+            <a class="link_a" href="#">
+                <h3 class="link_h3">სახლი და ეზოს მოვლა</h3>
+                <img class="link_img" src="picture/db7e60ec-9490-4656-8dde-d1e87b17d6db_Thumb.png" alt="picture">
+            </a>
+            <a class="link_a" href="#">
+                <h3 class="link_h3">თავის მოვლა</h3>
+                <img class="link_img" src="picture/4443f66e-f81a-4856-ab41-ef5362b26bdd_Thumb.png" alt="picture">
+            </a>
+            <a class="link_a" href="#">
+                <h3 class="link_h3">წვრილი საოჯახო ტექნიკა</h3>
+                <img class="link_img" src="picture/92093794-47e6-4b00-b5c1-2f0bcf96c557_Thumb.png" alt="picture">
+            </a>
+            <a class="link_a" href="#">
+                <h3 class="link_h3">ჭკვიანი სახლი</h3>
+                <img class="link_img" src="picture/0e172aa5-fbf0-492e-92bc-2960d4907a2e_Thumb.png" alt="picture">
+            </a>
+        </div>
+    </section>
+
+    <section class="section_card_div">
+        <p class="mxolod">მხოლოდ ონლაინ</p>
+        <div id="cCarousel">
+            <div class="arrow" id="prev">
+                <i class="fa-solid fa-chevron-left"></i>
+            </div>
+            <div class="arrow" id="next">
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+            <div id="carousel-vp">
+                <div id="cCarousel-inner">
+
+                    <article class="cCarousel-item">
+                        <img class="fasdakleba" src="picture/1.bmp" alt="Moon">
+                        <img class="macivari" src="picture/159422_5734_1.jpg" alt="Moon">
+                        <div class="infos">
+                            <h3 class="text">Beko B5RCNE565HXPMG</h3>
+                            <h3 class="text">Grey</h3>
+                            <h3 class="text">2119₾ <span>2899₾</span></h3>
+                            <div class="card_button">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <button type="button">ყიდვა</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="cCarousel-item">
+                        <img class="fasdakleba" src="picture/1.bmp" alt="Moon">
+                        <img class="macivari" src="picture/159422_5734_1.jpg" alt="Moon">
+                        <div class="infos">
+                            <h3 class="text">Beko B5RCNE565HXPMG</h3>
+                            <h3 class="text">Grey</h3>
+                            <h3 class="text">2119₾ <span>2899₾</span></h3>
+                            <div class="card_button">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <button type="button">ყიდვა</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="cCarousel-item">
+                        <img class="fasdakleba" src="picture/1.bmp" alt="Moon">
+                        <img class="macivari" src="picture/159422_5734_1.jpg" alt="Moon">
+                        <div class="infos">
+                           <h3 class="text">Beko B5RCNE565HXPMG</h3>
+                            <h3 class="text">Grey</h3>
+                            <h3 class="text">2119₾ <span>2899₾</span></h3>
+                            <div class="card_button">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <button type="button">ყიდვა</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="cCarousel-item">
+                        <img class="fasdakleba" src="picture/1.bmp" alt="Moon">
+                        <img class="macivari" src="picture/159422_5734_1.jpg" alt="Moon">
+                        <div class="infos">
+                           <h3 class="text">Beko B5RCNE565HXPMG</h3>
+                            <h3 class="text">Grey</h3>
+                            <h3 class="text">2119₾ <span>2899₾</span></h3>
+                            <div class="card_button">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <button type="button">ყიდვა</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="cCarousel-item">
+                        <img class="fasdakleba" src="picture/1.bmp" alt="Moon">
+                        <img class="macivari" src="picture/159422_5734_1.jpg" alt="Moon">
+                        <div class="infos">
+                            <h3 class="text">Beko B5RCNE565HXPMG</h3>
+                            <h3 class="text">Grey</h3>
+                            <h3 class="text">2119₾ <span>2899₾</span></h3>
+                            <div class="card_button">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <button type="button">ყიდვა</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="cCarousel-item">
+                        <img class="fasdakleba" src="picture/1.bmp" alt="Moon">
+                        <img class="macivari" src="picture/159422_5734_1.jpg" alt="Moon">
+                        <div class="infos">
+                            <h3 class="text">Beko B5RCNE565HXPMG</h3>
+                            <h3 class="text">Grey</h3>
+                            <h3 class="text">2119₾ <span>2899₾</span></h3>
+                            <div class="card_button">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <button type="button">ყიდვა</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <aside class="img_div">
+        <img class="picture_div" src="picture/2.jpg" alt="picture">
+    </aside>
+
+    <SEction class="cvrili_sakofacxovrebo_teqnika">
+        <p class="cvrili_teqnika">წვრილი საყოფაცხოვრებო ტექნიკა</p>
+        <div class="sakofacxovrebo_photo">
+            <img class="img_3" src="picture/3.jpg" alt="picture">
+            <img class="img_4" src="picture/4.jpg" alt="picture">
+            <img class="img_5" src="picture/5.jpg" alt="picture">
+            <img class="img_6" src="picture/6.jpg" alt="picture">
+            <img class="img_7" src="picture/7.jpg" alt="picture">
+        </div>
+    </SEction>
+
+<footer>
+    <div class="footer_div">
+        <div class="chvens_Sesaxeb">
+            <p class="footer_text">ჩვენს შესახებ</p>
+            <a href="#">ვინ ვართ ჩვენ</a>
+            <a href="#">ონლაინ ყიდვის ინსტრუქცია</a>
+            <a href="#">ონლაინ გადახდის მეთოდები</a>
+            <a href="#">სერვის ცენტრების მისამართები</a>
+        </div>
+
+        <div class="cesebi_pirobebi">
+            <p class="footer_text">წესები და პირობები</p>
+            <a href="#">წესები და პირობები</a>
+            <a href="#">საგარანტიო პირობები</a>
+            <a href="#">მიწოდების წესები და პირობები</a>
+            <a href="#">პერსონალურ მონაცემთა პოლიტიკა</a>
+        </div>
+
+        <div class="gamogvkevi">
+            <p class="footer_text">გამოგვყევი</p>
+            <a href="#">faceboock</a>
+            <a href="#">instagram</a>
+            <a href="#">TikTok</a>
+            <a href="#">Youtube</a>
+        </div>
+
+        <div class="dagvikavshirdi">
+            <p class="footer_text">დაგვიკავშირდი</p>
+            <a href="#">sartania.ka@gmail.com</a>
+            <a href="#">599 98 52 26</a>
+            <a href="#">*3838</a>
+            <a href="#">მაღაზიები</a>
+        </div>
+    </div>
+    <div class="saavtoro_text_div">
+        <p class="saavtoro_text">საავტორო უფლებები © 2026 Alta.ge. ყველა უფლება დაცულია.</p>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+    <script>
+     
+     const mainButton = document.getElementById('mainButton');
+const dropdownMenu = document.getElementById('dropdownMenu');
+const categoryItems = document.querySelectorAll('.category-item');
+const subMenuContainer = document.getElementById('subMenuContainer');
+const subMenus = document.querySelectorAll('.sub-menu-inner');
+const menuContainer = document.querySelector('.menu-container');
+
+// ღილაკზე მაუსის მიტანა - ძირითადი მენიუს გამოჩენა
+mainButton.addEventListener('mouseover', () => {
+    dropdownMenu.classList.remove('hidden');
+});
+
+
+
+// კატეგორიებზე მაუსის მიტანა - ქვემენიუების მართვა
+categoryItems.forEach(item => {
+    item.addEventListener('mouseover', () => {
+        const targetId = item.getAttribute('data-target');
+        
+        // ვაჩვენებთ ქვემენიუს კონტეინერს
+        subMenuContainer.classList.remove('hidden');
+        
+        // ვმალავთ ყველა ქვემენიუს და ვაჩვენებთ მხოლოდ შესაბამისს
+        subMenus.forEach(menu => {
+            menu.classList.add('hidden');
+            if (menu.id === targetId) {
+                menu.classList.remove('hidden');
+            }
+        });
+    });
+});
+
+// მთლიანი კონტეინერიდან მაუსის გასვლა - ყველაფრის დახურვა
+menuContainer.addEventListener('mouseleave', () => {
+    dropdownMenu.classList.add('hidden');
+    subMenuContainer.classList.add('hidden');
+});
+
+const modal = document.getElementById('loginModal');
+        const openBtn = document.getElementById('openBtn');
+        const closeBtn = document.getElementById('closeBtn');
+
+        // ფანჯრის გახსნა
+        openBtn.addEventListener('click', () => {
+        modal.showModal();
+        });
+
+        // ფანჯრის დახურვა
+        closeBtn.addEventListener('click', () => {
+        modal.close();
+        });
+
+
+
+        const countrySelect = document.getElementById('countrySelect');
+const visualFlag = document.querySelector('.selected-visual .flag');
+const visualCode = document.querySelector('.selected-visual .code');
+
+countrySelect.addEventListener('change', function() {
+    const selectedOption = this.options[this.selectedIndex];
+    visualFlag.textContent = selectedOption.getAttribute('data-flag');
+    visualCode.textContent = this.value;
+});
+
+
+
+
+
+function switchTab(tab) {
+    // 1. მოვხსნათ აქტიური კლასი ყველა ღილაკს და კონტენტს
+    document.querySelectorAll('.toggle-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+    // 2. დავამატოთ აქტიური კლასი არჩეულს
+    if (tab === 'phone') {
+        document.getElementById('btn-phone').classList.add('active');
+        document.getElementById('content-phone').classList.add('active');
+    } else {
+        document.getElementById('btn-email').classList.add('active');
+        document.getElementById('content-email').classList.add('active');
+    }
+}
+
+// ქვეყნის კოდის სელექტორის ლოგიკა (წინა მიმოწერიდან)
+document.getElementById('countrySelect').addEventListener('change', function() {
+    const selectedOption = this.options[this.selectedIndex];
+    document.querySelector('.flag').textContent = selectedOption.getAttribute('data-flag');
+    document.querySelector('.code').textContent = this.value;
+});
+
+
+const prev = document.querySelector("#prev");
+const next = document.querySelector("#next");
+
+let carouselVp = document.querySelector("#carousel-vp");
+
+let cCarouselInner = document.querySelector("#cCarousel-inner");
+let carouselInnerWidth = cCarouselInner.getBoundingClientRect().width;
+
+let leftValue = 0;
+
+// Variable used to set the carousel movement value (card's width + gap)
+const totalMovementSize =
+  parseFloat(
+    document.querySelector(".cCarousel-item").getBoundingClientRect().width,
+    10
+  ) +
+  parseFloat(
+    window.getComputedStyle(cCarouselInner).getPropertyValue("gap"),
+    10
+  );
+
+prev.addEventListener("click", () => {
+  if (!leftValue == 0) {
+    leftValue -= -totalMovementSize;
+    cCarouselInner.style.left = leftValue + "px";
+  }
+});
+
+next.addEventListener("click", () => {
+  const carouselVpWidth = carouselVp.getBoundingClientRect().width;
+  if (carouselInnerWidth - Math.abs(leftValue) > carouselVpWidth) {
+    leftValue -= totalMovementSize;
+    cCarouselInner.style.left = leftValue + "px";
+  }
+});
+
+const mediaQuery510 = window.matchMedia("(max-width: 510px)");
+const mediaQuery770 = window.matchMedia("(max-width: 770px)");
+
+mediaQuery510.addEventListener("change", mediaManagement);
+mediaQuery770.addEventListener("change", mediaManagement);
+
+let oldViewportWidth = window.innerWidth;
+
+function mediaManagement() {
+  const newViewportWidth = window.innerWidth;
+
+  if (leftValue <= -totalMovementSize && oldViewportWidth < newViewportWidth) {
+    leftValue += totalMovementSize;
+    cCarouselInner.style.left = leftValue + "px";
+    oldViewportWidth = newViewportWidth;
+  } else if (
+    leftValue <= -totalMovementSize &&
+    oldViewportWidth > newViewportWidth
+  ) {
+    leftValue -= totalMovementSize;
+    cCarouselInner.style.left = leftValue + "px";
+    oldViewportWidth = newViewportWidth;
+  }
+}
+    </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</body>
+</html>

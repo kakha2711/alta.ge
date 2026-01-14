@@ -1,0 +1,1038 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    background-color: #F9F7FD;
+    justify-items: center;
+    
+    nav{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+:root {
+  --alta-white: #FFF;
+  --alta-blue: #0056b3;
+  --light-gray: #f4f4f4;
+  --border: #e0e0e0;
+  --alta-black:black;
+}
+
+/*ჩამოშლადი მენიუს დასაწყისი*/
+
+.menu-container {
+    position: relative;
+    display: inline-block;
+    font-family: sans-serif;
+    align-content: center;
+}
+
+.category-btn {
+    width: 150px;
+    justify-content: center;
+    padding: 5px 10px;
+    cursor: pointer;
+    background: var(--alta-white);
+    color: var(--alta-black);
+    font-size: 15px;
+    font-weight: 700;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    transition: box-shadow 0.3s ease;
+
+    .burger-bars {
+        width: 30px;
+        margin-right: 12px;
+    }
+
+    .burger-bars span {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: black;
+        margin: 4px 0;
+    }
+}
+
+/* როდესაც მაუსი შედის კონტეინერში (ღილაკზე ან მენიუზე) */
+.menu-container:hover .category-btn {
+    box-shadow: rgba(116, 81, 196, 0.9) 1px 2px 8.5px 0px;
+}
+
+
+
+.dropdown-content {
+    position: absolute;
+    top: 100%; /* ზუსტად ღილაკის ქვეშ */
+    left: 0;
+    background: var(--alta-white);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    display: flex;
+    z-index: 1000;
+    min-width: 250px;
+}
+
+.main-categories {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-right: 1px solid #ddd;
+}
+
+.category-item {
+    padding: 15px;
+    cursor: pointer;
+    width: 250px;
+}
+
+.category-item:hover {
+    background: #f1f1f1;
+}
+
+.sub-menu-content {
+    padding: 20px;
+    display: flex;
+    min-width: 500px;
+    background: #fff;
+}
+
+.sub-menu-inner {
+    display: flex;
+    gap: 40px;
+}
+
+.column a {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    color: var(--alta-black);
+    text-decoration: none;
+}
+
+.column p {
+    margin: 5px 0;
+    font-size: 13px;
+    color: var(--alta-black);
+    cursor: pointer;
+}
+
+/* დამალვის კლასი */
+.hidden {
+    display: none !important;
+}
+
+/*ჩამოშლადი მენიუს დასასრული*/
+
+/* ძებნის ღილაკის დასაწყისი */
+
+.search_div {
+  align-content: center;
+  display: flex;
+  align-items: center;
+}
+.search_div .search {
+  width: 374px;
+  height: 40px;
+  border-radius: 30px;
+  border: none;
+}
+.search_div .fa-magnifying-glass {
+  position: relative;
+  align-content: center;
+  left: -30px;
+  width: 30px;
+  height: 30px;
+  background-color: #735EA8;
+  color: white;
+  border-radius: 20px;
+}
+
+/* ძებნის ღილაკის დასასრული */
+
+/* შესვლის ფორმის დასაწყისი */
+
+.last {
+  width: 30%;
+  align-items: center;
+  display: flex;
+}
+
+.last .fa-solid, .last .fa-regular {
+  width: 50px;
+  height: 50px;
+  background-color: #735EA8;
+  border-radius: 30px;
+  color: white;
+  align-content: center;
+}
+
+.last .fa-regular {
+  margin: 0 15px;
+}
+
+.last .login_in {
+  width: 100px;
+  height: 50px;
+  background-color: white;
+  border-radius: 30px;
+  border: none;
+}
+
+.last .log_in_button {
+  background-color: white;
+  height: 40px;
+  margin-right: 10px;
+  color: #000;
+  width: fit-content;
+}
+
+.last dialog {
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  width: 300px;
+  margin: auto;
+}
+
+.last dialog .profile {
+  text-align: center;
+  margin-top: 15px;
+}
+.last dialog .avtorizacia {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.last dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5); /* ფონის გამუქება */
+}
+
+.last .login_emblema {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.last .buttons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  justify-content: end;
+}
+
+.last .Language {
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  background-color: white;
+  align-content: center;
+  text-align: center;
+  border: none;
+  margin-left: 20px;
+}
+
+.last .login_in:hover, .last .Language:hover {
+  box-shadow: rgba(116, 81, 196, 0.9) 1px 2px 8.5px 0px;
+}
+
+
+
+
+
+
+
+#loginModal{
+    width: 450px;
+}
+
+#closeBtn{
+    border: none;
+    border-radius: 15px;
+    width: 30px;
+    height: 30px;
+    background-color: #F7F7F7;
+}
+
+/* კონტეინერი */
+.auth-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    width: 400px;
+}
+
+/* Toggle ღილაკების გარსი */
+.toggle-wrapper {
+    display: flex;
+    background-color: #f1f1f1;
+    border-radius: 50px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.toggle-btn {
+    flex: 1;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background: transparent;
+    color: #555;
+}
+
+
+.form-select{
+    height: 30px;
+    border: 1px solid rgb(138, 131, 131);
+    border-radius: 15px;
+
+}
+
+/* აქტიური ღილაკის სტილი (იასამნისფერი) */
+.toggle-btn.active {
+    background-color: #7451c4;
+    color: white;
+}
+
+/* ინფუთების კონტროლი */
+.tab-content {
+    display: none; /* საწყისად ყველაფერი დამალულია */
+}
+
+.tab-content.active {
+    display: flex; /* მხოლოდ აქტიური ჩანს */
+    gap: 10px;
+}
+
+/* თქვენი მობილურის ინფუთის დამატებითი სტილი */
+.phone {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.phone-number, .email-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+
+.header_last{
+  width: 100%;
+  height: 50px;
+  border-top: 1px solid #cac9c9;
+  border-bottom: 1px solid #cac9c9;
+  display: flex;
+  align-items: center;
+
+  .phone{
+    margin-left: 10%;
+    font-weight: 700;
+  }
+
+  .blogi{
+    display: flex;
+    list-style-type: none;
+    margin-right: 10%;
+    
+    li{
+      width: 100px;
+    }
+  }
+}
+
+.Animation_section{
+  width: 100%;
+}
+
+
+.Animation_section{
+  justify-items: center;
+  padding: 25px 0;
+
+  /*ვიკოთხო ბორდერი მაინც რომ არ მუშაობს */
+  .slide{
+    width: 80%;
+    }
+  
+  .carousel-item{
+    border-radius: 15px;
+    object-fit: cover;
+    overflow: hidden;
+  }
+}
+
+.image{
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+ 
+  border: 2px solid red;
+
+  .left{
+    width: 40%;
+    
+
+    .left_img{
+      width: 100%;
+      object-fit: cover;
+      overflow: hidden;
+      border-radius: 15px;
+
+     
+    }
+  }
+
+  .right{
+    width: 40%;
+
+    .right_img{
+      width: 100%;
+      border-radius: 15px;
+      object-fit: cover;
+      overflow: hidden;
+
+     
+    }
+  }
+}
+
+
+.section_categoriebi{
+  width: 100%;
+  align-content: center;
+  justify-items: center;
+  margin-top: 20px;
+  
+  .kategoriebi{
+    display: block;
+    width: 80%;
+  }
+
+  .link_div{
+    width: 80%;
+    gap: 20px;
+    row-gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+
+    .link_a{
+      background-color: #f3ebf9;
+      height: 110px;
+      text-decoration: none;
+      padding: 20px;
+      border-radius: 17px;
+      display: flex;
+      
+      .link_h3{
+        max-width: 103px;
+        height: 70px;
+        line-height: 17px;
+        font-weight: 800;
+        font-size: 12px;
+        overflow-wrap: break-word;
+
+      }
+
+      .link_img{
+        width: 74px;
+        height: 88px;
+      }
+    }
+  }
+
+}
+
+/*---------slaider*/
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #222;
+}
+
+#cCarousel {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+}
+
+#cCarousel .arrow {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  width: 45px;
+  height: 45px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  z-index: 1;
+  font-size: 26px;
+  color: white;
+  background: #00000072;
+  cursor: pointer;
+}
+
+#cCarousel #prev {
+  left: 0px;
+}
+
+#cCarousel #next {
+  right: 0px;
+}
+
+#carousel-vp {
+  width: 770px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+}
+
+@media (max-width: 770px) {
+  #carousel-vp {
+    width: 510px;
+  }
+}
+
+@media (max-width: 510px) {
+  #carousel-vp {
+    width: 250px;
+  }
+}
+
+#cCarousel #cCarousel-inner {
+  display: flex;
+  position: absolute;
+  transition: 0.3s ease-in-out;
+  gap: 10px;
+  left: 0px;
+}
+
+.cCarousel-item {
+  width: 250px;
+  height: 500px;
+  border: 2px solid white;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.macivari{
+  width: 100%;
+  object-fit: cover;
+  min-height: 246px;
+  color: white;
+}
+
+.fasdakleba{
+  width: 30px;
+}
+.cCarousel-item .infos {
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background: white;
+  color: black;
+
+}
+
+
+.cCarousel-item .infos button {
+  background: var(--alta-blue);
+  padding: 10px 30px;
+  border-radius: 15px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.fa-cart-shopping{
+  align-content: center;
+}
+
+.card_button{
+  display: flex;
+}
+
+.section_card_div{
+  margin-bottom: 50px;
+}
+
+.text{
+  font-size: 20px;
+  
+  span{
+    background-image: linear-gradient(to top right, transparent 40%, red 48%, red 52%, transparent 40%);
+  }
+}
+
+.section_card_div{
+  width: 100%;
+}
+
+.mxolod{
+  width: 100%;
+  padding: 50px 0 20px 20%;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.cCarousel-item{
+  border: 1.5px solid black;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+.img_div{
+  width: 100%;
+  justify-items: center;
+
+  .picture_div{
+    width: 80%;
+    display: block;
+    border-radius: 15px;
+  }
+}
+/*----------end slider---------*/
+
+
+/*------cvrili_sakofacxorebo_teqnika*/
+
+.cvrili_sakofacxovrebo_teqnika{
+  width: 100%;
+  justify-items: center;
+  
+  .cvrili_teqnika{
+    width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 50px 0 15px 0;
+    padding-left: 10%;
+  }
+
+  .sakofacxovrebo_photo{
+    width: 80%;
+    display: grid;
+    gap: 10px;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2,1fr);
+
+    .img_3{
+      grid-column: 1/2;
+      grid-row: 1/3;
+
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+    }
+
+    .img_4{
+      grid-column: 2/3;
+      grid-row: 1/2;
+
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+    }
+
+    .img_5{
+      grid-column: 3/4;
+      grid-row: 1/2;
+
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+    }
+
+    .img_6{
+      grid-column: 2/3;
+      grid-row: 2/3;
+
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+    }
+
+    .img_7{
+      grid-column: 3/4;
+      grid-row: 2/3;
+
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+    }
+  }
+}
+
+
+footer{
+  width: 100%;
+  justify-items: center;
+  margin-top: 40px;
+  background-color: #F9F7FD;
+
+
+  .footer_div
+  {
+      width: 80%;
+      display: flex;
+      
+    .chvens_Sesaxeb, .cesebi_pirobebi,
+    .gamogvkevi, .dagvikavshirdi{
+      width: 30%;
+      display: flex;
+      padding-top: 15px;
+      flex-direction:column;
+
+      a{
+        text-decoration: none;
+        line-height: 40px;
+        font-weight: 700;
+        font-size: 12px;
+        color: #000009;
+      }
+
+
+      .footer_text{
+        font-weight: 700;
+        font-size: 12px;
+        color: #7f56d9;
+      }
+
+    }
+  }
+
+  .saavtoro_text_div{
+    width: 80%;
+    height: 100px;
+    align-content: center;
+
+    .saavtoro_text{
+      align-content: center;
+      margin: 0;
+    }
+  }
+
+}
+
+.main{
+  width: 100%;
+  display: flex;
+
+  .mobile_div{
+    width: 35%;
+    
+    .range-container{
+      margin: 0 5% 0 15%;
+      display: flex;
+      justify-content: space-between;
+      padding-block: 26px 30px;
+      padding-top: 60px;
+    }
+
+    .main_div{
+      border: 2px solid black;
+      border-radius: 15px;
+      margin: 0 5% 0 15%;
+
+      .slider {
+        position: relative;
+        width: 300px;
+        height: 6px;
+        margin: 30px 15px;
+      }
+
+      .track {
+        position: absolute;
+        width: 100%;
+        height: 6px;
+        background: #ddd;
+        border-radius: 3px;
+      }
+
+      .range {
+      position: absolute;
+      height: 6px;
+      background: #4caf50;
+      border-radius: 3px;
+      }
+
+      .slider input[type="range"] {
+        position: absolute;
+        width: 100%;
+        height: 6px;
+        background: none;
+        pointer-events: none;
+        -webkit-appearance: none;
+      }
+
+      .slider input[type="range"]::-webkit-slider-thumb {
+        pointer-events: auto;
+        -webkit-appearance: none;
+        width: 16px;
+        height: 16px;
+        background: #4caf50;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .values{
+        width: 100%;
+        display: flex;
+        margin-left: 15px;
+        /*border: 2px solid black;*/
+
+        .values_left{
+          display: block;
+          width: 40%;
+
+          .minVal{
+            border: 2px solid black;
+            width: 100%;
+            border-radius: 5px;
+          }        
+        }
+
+        .values_righte{
+          display: block;
+          width: 40%;
+
+
+          .maxVal_mde{
+            margin-left: 30px;          
+          }
+
+          .maxVal{
+            border: 2px solid black;
+            margin-left: 20px;
+            border-radius: 5px;
+            width: 100%;
+          }
+        }
+      }
+
+      .aqciis_div, .brendi_div{
+        border: 0.5px solid black;
+        border-left: none;
+        border-right: none;
+      }
+
+
+      .aqciis_p{
+        margin: 0;
+        margin-left: 15px;
+      }
+    }
+  }
+}
+/*----------------------------------*/
+
+
+
+.card_section{
+  width: 65%;
+  border: 2px solid red;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+
+  gap: 20px;
+  row-gap: 20px;
+
+  .card_mobilePhone{
+    width: 200px;
+    height: 300px;
+    border: 1px solid #dcdcdc99;
+    border-radius: 20px;
+     
+      .card_card{
+        width: 100%;
+        align-content: end;
+
+        .card_img_picture{          
+          display: flex;
+          justify-items: end;
+
+          .fa-solid{
+            z-index: 2;
+            border-radius: 10px;
+            background-color: white;
+            position:relative;
+            left: -30px;
+            top: 10px;
+            width: 30px;
+            height: fit-content;
+          }
+
+          .fa-regular{
+            z-index: 2;
+            border-radius: 10px;
+            background-color: white;
+            position:relative;
+            left: -50px;
+            top:40px;
+            width: 30px;
+            height: fit-content;
+          }
+  
+          img{
+            width: 75%;
+            height: auto;
+            z-index: 1;
+  
+           }
+          
+        }
+      }
+  }
+
+  .card_button_kidva{
+    width: 100%;
+
+    p{
+      margin: 0;
+    }
+
+    .kidva_botton_card{
+      width: 100%;
+
+      button{
+        width: 100px;
+        height: 25px;
+        border: none;
+        background-color: #7f56d9;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 14px;
+        border-radius: 10px;
+        box-shadow: rbg(42,16,62,0.15) 2px 4px 5px 0;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width:1150px){
+
+  .search_div{
+    display: none;
+  }
+
+  .login_in, .fa-solid, .fa-regular{
+    display: none !important;
+  }
+
+  .category-btn{
+    width: 40px;
+    position:fixed;
+    left: 10px;
+    top: 20px;
+
+    .categori{
+      display: none;
+    }
+
+    .burger-bars{
+      margin: auto;
+    }
+  }
+
+  .dropdown-content{
+    position: fixed;
+    left: 10px;
+    top: 70px;
+  }
+
+  .Language{
+    position: fixed;
+    right: 20px;
+  }
+
+  .emblema_img{
+    width: 250px;
+    object-fit: contain;
+  }
+
+  .header_last{
+    display: none;
+  }
+
+  .image{
+    width: 100%;
+    min-width: 650px;
+    flex-direction: column;
+    
+
+    .left{
+      width: 250px;
+      border: 2px solid yellow;
+      margin: auto;
+
+      .left_img{
+        width: 100%;
+        object-fit: cover;
+        overflow: hidden;
+        border-radius: 15px;
+       
+         
+      }
+    }
+
+    .right{
+      width: 250px;
+      border: 2px solid greenyellow;
+      margin: auto;
+
+      .right_img{
+        width: 100%;
+        object-fit: cover;
+        overflow: hidden;
+        border-radius: 15px;
+       
+       
+      }
+    }
+  }
+
+
+  .section_categoriebi, .cvrili_sakofacxovrebo_teqnika,
+  .image, .section_card_div, .img_div,
+  .Animation_section{
+    overflow-x: hidden;
+    min-width: 650px;
+  }
+}
+
+
+/* შესვლის ფორმის დასასრული */
