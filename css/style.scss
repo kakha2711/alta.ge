@@ -27,7 +27,7 @@ header{
 /*ჩამოშლადი მენიუს დასაწყისი*/
 
 .menu-container {
-    position: relative;
+    /*position: relative;*/
     display: inline-block;
     font-family: sans-serif;
     align-content: center;
@@ -426,12 +426,13 @@ header{
     width: 80%;
     gap: 20px;
     row-gap: 20px;
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-
+    display: flex;
+    flex-wrap: wrap;
+    /*grid-template-columns: repeat(5,1fr);
+*/
     .link_a{
+      width: 200px;
       background-color: #f3ebf9;
-      height: 110px;
       text-decoration: none;
       padding: 20px;
       border-radius: 17px;
@@ -943,49 +944,118 @@ footer{
 }
 
 
-@media screen and (max-width:1150px){
+@media  (max-width: 745px) {
+ 
+  header{
+    width: 100%;
+    border: 2px solid red;
 
-  .search_div{
-    display: none;
-  }
+      .emblema_img{
+        width: 250px;
+        object-fit: contain;
+        margin-left: 75px;
+      }
 
-  .login_in, .fa-solid, .fa-regular{
-    display: none !important;
-  }
+    .menu-container{
+      width: 0;
 
-  .category-btn{
-    width: 40px;
-    position:fixed;
-    left: 10px;
-    top: 20px;
+      .category-btn{
+        width: 40px;
 
-    .categori{
+        .categori{
+          display: none;
+        }
+
+        .burger-bars{
+          margin: auto;
+          position:absolute;
+          left: 10px;
+          top: 20px;
+        }
+      }
+
+      .section_categoriebi{
+        width: 100%;
+
+      }
+
+      
+
+    }
+
+  
+
+    .search_div, .header_last,
+    .header_last, .fa-arrow-right-to-bracket,
+    .fa-regular, .shesvla_button,
+    .fa-cart-shopping, .Language{
       display: none;
     }
 
-    .burger-bars{
-      margin: auto;
+
+      /*last ამ კლასიდან ქვემოთ რაც არის უნდა გავსტილო*/
+    
+  }
+
+  .main{
+    width: 100%;
+    display: block;
+    justify-items: center;
+
+    .mobile_div{
+      width: 80%;
+
+    }
+
+    .card_section{
+      width: 80%;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 10px;
+      row-gap: 10px;
+    justify-items: center;
     }
   }
+}
 
-  .dropdown-content{
-    position: fixed;
-    left: 10px;
-    top: 70px;
-  }
 
-  .Language{
-    position: fixed;
-    right: 20px;
-  }
+@media (min-width: 746px) and (max-width:1150px) {
+  header{
+    width: 100%;
+    border: 2px solid blue;
 
-  .emblema_img{
-    width: 250px;
-    object-fit: contain;
-  }
+      .emblema_img{
+        width: 250px;
+        object-fit: contain;
+        margin-left: 75px;
+      }
 
-  .header_last{
-    display: none;
+    .menu-container{
+      width: 100%;
+
+      .category-btn{
+        width: 40px;
+
+        .categori{
+          display: none;
+        }
+
+        .burger-bars{
+          margin: auto;
+          position:absolute;
+          left: 10px;
+          top: 20px;
+        }
+      }
+    }
+
+    .menu-container{
+      width: 0;
+    }
+
+      .Language{
+        display: none;
+      }
   }
 
   .image{
@@ -993,45 +1063,32 @@ footer{
     min-width: 650px;
     flex-direction: column;
     
+  }
 
-    .left{
-      width: 250px;
-      border: 2px solid yellow;
-      margin: auto;
+  .section_categoriebi{
+    width: 100%;
+        
+  }
 
-      .left_img{
-        width: 100%;
-        object-fit: cover;
-        overflow: hidden;
-        border-radius: 15px;
-       
-         
-      }
-    }
+  .main{
+    width: 100%;
+    display: block;
+    justify-items: center;
 
-    .right{
-      width: 250px;
-      border: 2px solid greenyellow;
-      margin: auto;
+    .mobile_div{
+      width: 80%;
 
-      .right_img{
-        width: 100%;
-        object-fit: cover;
-        overflow: hidden;
-        border-radius: 15px;
-       
-       
-      }
     }
   }
 
-
-  .section_categoriebi, .cvrili_sakofacxovrebo_teqnika,
-  .image, .section_card_div, .img_div,
-  .Animation_section{
-    overflow-x: hidden;
-    min-width: 650px;
+  .search_div, .header_last,
+  .header_last, .fa-arrow-right-to-bracket,
+  .fa-regular, .shesvla_button,
+  .fa-cart-shopping, .Language{
+    display: none;
   }
+
+
 }
 
 

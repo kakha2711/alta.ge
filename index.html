@@ -27,50 +27,50 @@
             <!-- ჩამოშლადი მენიუს დასაწყისი -->
 
 
-          <div class="menu-container">
-            <button id="mainButton" class="category-btn">
-                <div class="burger-bars">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <p class="categori">კატეგორიები </p>
-            </button>
+            <div class="menu-container">
+                <button id="mainButton" class="category-btn">
+                    <div class="burger-bars">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p class="categori">კატეგორიები </p>
+                </button>
     
-            <div id="dropdownMenu" class="dropdown-content hidden">
-                <ul class="main-categories">
-                    <li class="category-item" data-target="phones">📱 მობილური ტელეფონები და აქსესუარები</li>
-                    <li class="category-item" data-target="computers">💻 კომპიუტერული ტექნიკა და აქსესუარები</li>
-                </ul>
+                <div id="dropdownMenu" class="dropdown-content hidden">
+                    <ul class="main-categories">
+                        <li class="category-item" data-target="phones">📱 მობილური ტელეფონები და აქსესუარები</li>
+                        <li class="category-item" data-target="computers">💻 კომპიუტერული ტექნიკა და აქსესუარები</li>
+                    </ul>
 
-                <div id="subMenuContainer" class="sub-menu-content hidden">
-                    <div id="phones" class="sub-menu-inner hidden">
-                        <div class="column">
-                            <a href="page/MobilePhone.html">მობილური ტელეფონები</a>
-                            <a href="#">სმარტ საათები</a>
+                    <div id="subMenuContainer" class="sub-menu-content hidden">
+                        <div id="phones" class="sub-menu-inner hidden">
+                            <div class="column">
+                                <a href="page/MobilePhone.html">მობილური ტელეფონები</a>
+                                <a href="#">სმარტ საათები</a>
+                            </div>
+                            <div class="column">
+                                <a href="#">სმარტ საათების და აქსესუარები</a>
+                                <a href="#">მობილური ტელეფონის და აქსესუარები</a>
+                                <a href="#">დამცავი ქეისი და ეკრანის დამცავი</a>
+                            </div>
                         </div>
-                        <div class="column">
-                            <a href="#">სმარტ საათების და აქსესუარები</a>
-                            <a href="#">მობილური ტელეფონის და აქსესუარები</a>
-                            <a href="#">დამცავი ქეისი და ეკრანის დამცავი</a>
+
+                        <div id="computers" class="sub-menu-inner hidden">
+                            <div class="column">
+                                <a href="#">ნოუთბუქი და ნოუთბუქის აქსესუარები</a>
+                            </div>
+                            <div class="column">
+                                <a href="#">სისტემური ბლოკი</a>
+                                <a href="#">მონიტორი</a>
+                                <a href="#">მონიტორის აქსესუარები</a>
+                            </div>
+                            <div class="column">
+                                <a href="#">ქსელური მოწყობილობები</a>
+                                <a href="#">როუტერი და ქსელის გამანაწილებლები/სვიჩი</a>
+                            </div>
                         </div>
                     </div>
-
-                    <div id="computers" class="sub-menu-inner hidden">
-                        <div class="column">
-                            <a href="#">ნოუთბუქი და ნოუთბუქის აქსესუარები</a>
-                        </div>
-                        <div class="column">
-                            <a href="#">სისტემური ბლოკი</a>
-                            <a href="#">მონიტორი</a>
-                            <a href="#">მონიტორის აქსესუარები</a>
-                        </div>
-                        <div class="column">
-                            <a href="#">ქსელური მოწყობილობები</a>
-                            <a href="#">როუტერი და ქსელის გამანაწილებლები/სვიჩი</a>
-                        </div>
-                    </div>
-                </div>
                 </div>
             </div>
 
@@ -93,9 +93,10 @@
                 <i class="fa-solid fa-cart-shopping"></i>
                 <i class="fa-regular fa-heart"></i>
             
-                <button class="login_in" id="openBtn" type="button" value="შესვლა">
+                <button class="login_in" id="openBtn" type="button" >
                     <i class="fa-solid fa-arrow-right-to-bracket log_in_button"></i>
-                    შესვლა
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                    <p class="shesvla_button">შესვლა</p>
                 </button>
 
                 <dialog id="loginModal">
