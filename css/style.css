@@ -26,7 +26,7 @@ header nav {
 
 /*ჩამოშლადი მენიუს დასაწყისი*/
 .menu-container {
-  /*position: relative;*/
+  position: relative;
   display: inline-block;
   font-family: sans-serif;
   align-content: center;
@@ -70,7 +70,7 @@ header nav {
   background: var(--alta-white);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   display: flex;
-  z-index: 1000;
+  z-index: 3000;
   min-width: 250px;
 }
 
@@ -854,7 +854,10 @@ footer .saavtoro_text_div .saavtoro_text {
     margin-left: 75px;
   }
   header .menu-container {
-    width: 0;
+    width: 100%;
+    position: absolute;
+    left: 10px;
+    top: 20px;
   }
   header .menu-container .category-btn {
     width: 40px;
@@ -862,23 +865,18 @@ footer .saavtoro_text_div .saavtoro_text {
   header .menu-container .category-btn .categori {
     display: none;
   }
-  header .menu-container .category-btn .burger-bars {
-    margin: auto;
-    position: absolute;
-    left: 10px;
-    top: 20px;
-  }
   header .menu-container .section_categoriebi {
     width: 100%;
+  }
+  header .fa-right-to-bracket {
+    display: block;
   }
   header .search_div, header .header_last,
   header .header_last, header .fa-arrow-right-to-bracket,
   header .fa-regular, header .shesvla_button,
-  header .fa-cart-shopping, header .Language {
+  header .fa-cart-shopping, header .Language,
+  header .shesvla_button {
     display: none;
-  }
-  header {
-    /*last ამ კლასიდან ქვემოთ რაც არის უნდა გავსტილო*/
   }
   .main {
     width: 100%;
@@ -909,21 +907,15 @@ footer .saavtoro_text_div .saavtoro_text {
   }
   header .menu-container {
     width: 100%;
+    position: absolute;
+    left: 10px;
+    top: 20px;
   }
   header .menu-container .category-btn {
     width: 40px;
   }
   header .menu-container .category-btn .categori {
     display: none;
-  }
-  header .menu-container .category-btn .burger-bars {
-    margin: auto;
-    position: absolute;
-    left: 10px;
-    top: 20px;
-  }
-  header .menu-container {
-    width: 0;
   }
   header .Language {
     display: none;
@@ -947,7 +939,8 @@ footer .saavtoro_text_div .saavtoro_text {
   .search_div, .header_last,
   .header_last, .fa-arrow-right-to-bracket,
   .fa-regular, .shesvla_button,
-  .fa-cart-shopping, .Language {
+  .fa-cart-shopping, .Language,
+  .shesvla_button {
     display: none;
   }
 }

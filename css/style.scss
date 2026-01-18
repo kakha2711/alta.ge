@@ -27,7 +27,7 @@ header{
 /*ჩამოშლადი მენიუს დასაწყისი*/
 
 .menu-container {
-    /*position: relative;*/
+    position: relative;
     display: inline-block;
     font-family: sans-serif;
     align-content: center;
@@ -75,7 +75,7 @@ header{
     background: var(--alta-white);
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     display: flex;
-    z-index: 1000;
+    z-index: 3000;
     min-width: 250px;
 }
 
@@ -957,7 +957,10 @@ footer{
       }
 
     .menu-container{
-      width: 0;
+      width: 100%;
+      position:absolute;
+      left: 10px;
+      top: 20px;
 
       .category-btn{
         width: 40px;
@@ -966,12 +969,6 @@ footer{
           display: none;
         }
 
-        .burger-bars{
-          margin: auto;
-          position:absolute;
-          left: 10px;
-          top: 20px;
-        }
       }
 
       .section_categoriebi{
@@ -983,17 +980,20 @@ footer{
 
     }
 
-  
+    .fa-right-to-bracket{
+      display: block;
+    }
 
     .search_div, .header_last,
     .header_last, .fa-arrow-right-to-bracket,
     .fa-regular, .shesvla_button,
-    .fa-cart-shopping, .Language{
+    .fa-cart-shopping, .Language,
+    .shesvla_button{
       display: none;
     }
 
 
-      /*last ამ კლასიდან ქვემოთ რაც არის უნდა გავსტილო*/
+      
     
   }
 
@@ -1032,6 +1032,9 @@ footer{
 
     .menu-container{
       width: 100%;
+      position:absolute;
+      left: 10px;
+      top: 20px;
 
       .category-btn{
         width: 40px;
@@ -1040,22 +1043,13 @@ footer{
           display: none;
         }
 
-        .burger-bars{
-          margin: auto;
-          position:absolute;
-          left: 10px;
-          top: 20px;
-        }
       }
     }
 
-    .menu-container{
-      width: 0;
+   
+    .Language{
+      display: none;
     }
-
-      .Language{
-        display: none;
-      }
   }
 
   .image{
@@ -1084,7 +1078,8 @@ footer{
   .search_div, .header_last,
   .header_last, .fa-arrow-right-to-bracket,
   .fa-regular, .shesvla_button,
-  .fa-cart-shopping, .Language{
+  .fa-cart-shopping, .Language,
+  .shesvla_button{
     display: none;
   }
 
