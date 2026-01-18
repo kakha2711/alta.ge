@@ -161,6 +161,8 @@ header{
   width: 30%;
   align-items: center;
   display: flex;
+
+  
 }
 
 .last .fa-solid, .last .fa-regular {
@@ -182,6 +184,13 @@ header{
   background-color: white;
   border-radius: 30px;
   border: none;
+  display: flex;
+  align-self: center;
+  
+
+  .shesvla_button{
+    align-content: center;
+  }
 }
 
 .last .log_in_button {
@@ -224,6 +233,7 @@ header{
   display: flex;
   justify-content: space-between;
   justify-content: end;
+
 }
 
 .last .Language {
@@ -380,7 +390,6 @@ header{
   justify-content: center;
   flex-wrap: wrap;
  
-  border: 2px solid red;
 
   .left{
     width: 40%;
@@ -863,7 +872,6 @@ footer{
 
 .card_section{
   width: 65%;
-  border: 2px solid red;
   display: grid;
   grid-template-columns: repeat(3,1fr);
 
@@ -943,6 +951,10 @@ footer{
   }
 }
 
+.fa-right-to-bracket{
+  display: none !important;
+}
+
 
 @media  (max-width: 745px) {
  
@@ -980,8 +992,13 @@ footer{
 
     }
 
-    .fa-right-to-bracket{
-      display: block;
+   
+    .login_in{
+      width: 50px !important;
+
+      .fa-right-to-bracket{
+        display: block !important;
+      }
     }
 
     .search_div, .header_last,
@@ -1074,6 +1091,14 @@ footer{
 
     }
   }
+
+    .login_in{
+      width: 50px !important;
+
+     .fa-right-to-bracket{
+        display: block !important;
+      }
+    }
 
   .search_div, .header_last,
   .header_last, .fa-arrow-right-to-bracket,

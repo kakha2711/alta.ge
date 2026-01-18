@@ -175,6 +175,11 @@ header nav {
   background-color: white;
   border-radius: 30px;
   border: none;
+  display: flex;
+  align-self: center;
+}
+.last .login_in .shesvla_button {
+  align-content: center;
 }
 
 .last .log_in_button {
@@ -359,7 +364,6 @@ header nav {
   gap: 10px;
   justify-content: center;
   flex-wrap: wrap;
-  border: 2px solid red;
 }
 .image .left {
   width: 40%;
@@ -776,7 +780,6 @@ footer .saavtoro_text_div .saavtoro_text {
 /*----------------------------------*/
 .card_section {
   width: 65%;
-  border: 2px solid red;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -843,6 +846,10 @@ footer .saavtoro_text_div .saavtoro_text {
   box-shadow: rbg(42, 16, 62, 0.15) 2px 4px 5px 0;
 }
 
+.fa-right-to-bracket {
+  display: none !important;
+}
+
 @media (max-width: 745px) {
   header {
     width: 100%;
@@ -868,8 +875,11 @@ footer .saavtoro_text_div .saavtoro_text {
   header .menu-container .section_categoriebi {
     width: 100%;
   }
-  header .fa-right-to-bracket {
-    display: block;
+  header .login_in {
+    width: 50px !important;
+  }
+  header .login_in .fa-right-to-bracket {
+    display: block !important;
   }
   header .search_div, header .header_last,
   header .header_last, header .fa-arrow-right-to-bracket,
@@ -935,6 +945,12 @@ footer .saavtoro_text_div .saavtoro_text {
   }
   .main .mobile_div {
     width: 80%;
+  }
+  .login_in {
+    width: 50px !important;
+  }
+  .login_in .fa-right-to-bracket {
+    display: block !important;
   }
   .search_div, .header_last,
   .header_last, .fa-arrow-right-to-bracket,
