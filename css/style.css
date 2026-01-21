@@ -851,6 +851,8 @@ footer .saavtoro_text_div .saavtoro_text {
 }
 
 .emblema_img {
+  width: 100%;
+  height: 100%;
   display: block;
   width: 150px;
   height: auto;
@@ -862,7 +864,7 @@ footer .saavtoro_text_div .saavtoro_text {
   width: 150px;
   height: 70px;
   cursor: pointer;
-  background-image: url("../picture/alta.bmp");
+  /*background-image: url("../picture/alta.bmp");*/
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
