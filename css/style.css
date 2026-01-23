@@ -5,6 +5,22 @@
   box-sizing: border-box;
 }
 
+:root {
+  --alta-white: #FFF;
+  --alta-blue: #0056b3;
+  --light-gray: #f4f4f4;
+  --border: #e0e0e0;
+  --alta-black:black;
+}
+
+@font-face {
+  font-family: "GoogleSans_17pt-Bold";
+  src: url(../fonts/GoogleSans_17pt-Bold.ttf);
+}
+@font-face {
+  font-family: "GoogleSans_17pt-Regular";
+  src: url(../fonts/GoogleSans_17pt-Regular.ttf);
+}
 header {
   width: 100%;
   background-color: #F9F7FD;
@@ -14,14 +30,6 @@ header nav {
   width: 80%;
   display: flex;
   justify-content: center;
-}
-
-:root {
-  --alta-white: #FFF;
-  --alta-blue: #0056b3;
-  --light-gray: #f4f4f4;
-  --border: #e0e0e0;
-  --alta-black:black;
 }
 
 /*ჩამოშლადი მენიუს დასაწყისი*/
@@ -72,6 +80,7 @@ header nav {
   display: flex;
   z-index: 3000;
   min-width: 250px;
+  font-family: GoogleSans_17pt-Regular, Arial, Helvetica, sans-serif;
 }
 
 .main-categories {
@@ -180,6 +189,7 @@ header nav {
 }
 .last .login_in .shesvla_button {
   align-content: center;
+  font-family: GoogleSans_17pt-Regular, Arial, Helvetica, sans-serif;
 }
 
 .last .log_in_button {
@@ -326,6 +336,8 @@ header nav {
   border-bottom: 1px solid #cac9c9;
   display: flex;
   align-items: center;
+  font-family: GoogleSans_17pt-Bold;
+  font-size: 15px;
 }
 .header_last .phone {
   margin-left: 10%;
@@ -393,6 +405,8 @@ header nav {
 .section_categoriebi .kategoriebi {
   display: block;
   width: 80%;
+  font-family: GoogleSans_17pt-Bold;
+  font-size: 15px;
 }
 .section_categoriebi .link_div {
   width: 80%;
@@ -400,6 +414,7 @@ header nav {
   row-gap: 20px;
   display: flex;
   flex-wrap: wrap;
+  font-family: GoogleSans_17pt-Regular, Arial, Helvetica, sans-serif;
   /*grid-template-columns: repeat(5,1fr);
   */
 }
@@ -567,8 +582,10 @@ body {
 .mxolod {
   width: 100%;
   padding: 50px 0 20px 20%;
-  font-size: 25px;
-  font-weight: 700;
+  /*font-size: 25px;
+  font-weight: 700;*/
+  font-family: GoogleSans_17pt-Bold;
+  font-size: 20px;
 }
 
 .cCarousel-item {
@@ -595,10 +612,12 @@ body {
 }
 .cvrili_sakofacxovrebo_teqnika .cvrili_teqnika {
   width: 100%;
-  font-size: 20px;
-  font-weight: 700;
+  /*    font-size: 20px;
+      font-weight: 700;*/
   margin: 50px 0 15px 0;
   padding-left: 10%;
+  font-family: GoogleSans_17pt-Bold;
+  font-size: 20px;
 }
 .cvrili_sakofacxovrebo_teqnika .sakofacxovrebo_photo {
   width: 80%;
@@ -648,6 +667,7 @@ footer {
   justify-items: center;
   margin-top: 40px;
   background-color: #F9F7FD;
+  font-family: GoogleSans_17pt-Regular, Arial, Helvetica, sans-serif;
 }
 footer .footer_div {
   width: 80%;
@@ -697,87 +717,12 @@ footer .saavtoro_text_div .saavtoro_text {
   justify-content: space-between;
   padding-block: 26px 30px;
   padding-top: 60px;
+  font-family: GoogleSans_17pt-Regular, Arial, Helvetica, sans-serif;
 }
 .main .mobile_div .main_div {
   border: 2px solid black;
   border-radius: 15px;
   margin: 0 5% 0 15%;
-  /*
-        .slider {
-          position: relative;
-          width: 300px;
-          height: 6px;
-          margin: 30px 15px;
-
-        }
-
-        .track {
-          position: absolute;
-          width: 100%;
-          height: 6px;
-          background: #ddd;
-          border-radius: 3px;
-        }
-
-        .range {
-        position: absolute;
-        height: 6px;
-        background: #4caf50;
-        border-radius: 3px;
-        }
-
-        .slider input[type="range"] {
-          position: absolute;
-          width: 100%;
-          height: 6px;
-          background: none;
-          pointer-events: none;
-          -webkit-appearance: none;
-        }
-
-        .slider input[type="range"]::-webkit-slider-thumb {
-          pointer-events: auto;
-          -webkit-appearance: none;
-          width: 16px;
-          height: 16px;
-          background: #4caf50;
-          border-radius: 50%;
-          cursor: pointer;
-        }
-
-        .values{
-          width: 100%;
-          display: flex;
-          margin-left: 15px;
-
-          .values_left{
-            display: block;
-            width: 40%;
-
-            .minVal{
-              border: 2px solid black;
-              width: 100%;
-              border-radius: 5px;
-            }        
-          }
-
-          .values_righte{
-            display: block;
-            width: 40%;
-
-
-            .maxVal_mde{
-              margin-left: 30px;          
-            }
-
-            .maxVal{
-              border: 2px solid black;
-              margin-left: 20px;
-              border-radius: 5px;
-              width: 100%;
-            }
-          }
-        }*/
 }
 .main .mobile_div .main_div .price-range {
   max-width: 400px;
@@ -790,6 +735,8 @@ footer .saavtoro_text_div .saavtoro_text {
 .main .mobile_div .main_div .price-range h3 {
   text-align: center;
   margin-bottom: 15px;
+  font-family: GoogleSans_17pt-Bold;
+  font-size: 25px;
 }
 .main .mobile_div .main_div .values {
   display: flex;
@@ -831,6 +778,10 @@ footer .saavtoro_text_div .saavtoro_text {
   border: 0.5px solid black;
   border-left: none;
   border-right: none;
+  font-family: GoogleSans_17pt-Regular, Arial, Helvetica, sans-serif;
+}
+.main .mobile_div .main_div .xelmisacvdomi, .main .mobile_div .main_div .type_div {
+  font-family: GoogleSans_17pt-Regular, Arial, Helvetica, sans-serif;
 }
 .main .mobile_div .main_div .aqciis_p {
   margin: 0;
