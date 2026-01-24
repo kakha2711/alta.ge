@@ -1080,7 +1080,12 @@ input[type="range"]::-moz-range-thumb {
     }
   }
 
-
+.image{
+    width: 100%;
+    min-width: 650px;
+    flex-direction: column;
+    
+  }
 
    .price-range {
         padding: 15px;
@@ -1161,6 +1166,7 @@ input[type="range"]::-moz-range-thumb {
 
  .price-range {
         padding: 15px;
+
     }
 }
 

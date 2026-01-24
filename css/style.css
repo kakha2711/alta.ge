@@ -934,6 +934,11 @@ footer .saavtoro_text_div .saavtoro_text {
     row-gap: 10px;
     justify-items: center;
   }
+  .image {
+    width: 100%;
+    min-width: 650px;
+    flex-direction: column;
+  }
   .price-range {
     padding: 15px;
   }
